@@ -1,0 +1,25 @@
+CREATE TABLE IF NOT EXISTS CUSTOMER_EXPORTS (
+    CustomerName TEXT,
+    ProductName TEXT,
+    ExportCountry TEXT
+);
+
+INSERT INTO CUSTOMER_EXPORTS(CustomerName, ProductName, ExportCountry) VALUES
+('Aaron', 'Laptops', 'USA'),
+('Jenna', 'Chairs', 'China'),
+('Boris', 'Organic Oil', 'UK'),
+('George', 'Smartphones', 'Australia'),
+('Jessica', 'Laptops', 'China'),
+('Aaron', 'Organic Oil', 'USA');
+
+SELECT * FROM CUSTOMER_EXPORTS;
+
+SELECT DISTINCT CustomerName FROM CUSTOMER_EXPORTS;
+
+SELECT DISTINCT ProductName FROM CUSTOMER_EXPORTS;
+
+SELECT * FROM CUSTOMER_EXPORTS WHERE CustomerName LIKE 'A%';
+
+SELECT * FROM CUSTOMER_EXPORTS WHERE CustomerName LIKE '%or%';
+
+SELECT * FROM CUSTOMER_EXPORTS WHERE CustomerName LIKE 'A%' AND CustomerName LIKE '%or%';
